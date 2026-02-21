@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="¿Quiénes Somos? — Misión 94.3 FM"
+  description="Conoce a Misión 94.3 FM, radio comunitaria de Cabimas, Zulia. Nuestra misión, visión y valores."
+>
+  <!-- Banner -->
+  <section
+    class="py-24 text-center text-white relative overflow-hidden"
+    style="background: linear-gradient(135deg, #0a0e52, #1a237e);"
+  >
+    <div
+      class="absolute inset-0 opacity-5"
+      style="background-image: repeating-linear-gradient(0deg, #fff 0, #fff 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, #fff 0, #fff 1px, transparent 1px, transparent 40px);"
+    >
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto px-4">
+      <span class="text-brand-red font-bold uppercase tracking-widest text-sm"
+        >Nuestra Historia</span
+      >
+      <h1 class="text-4xl sm:text-5xl font-black mt-3 mb-4">¿Quiénes Somos?</h1>
+      <p class="text-blue-200 text-lg">
+        Un medio de comunicación popular alternativo al servicio de la comunidad
+      </p>
+    </div>
+  </section>
+
+  <!-- Definición -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div
+        class="card-hover bg-neutral-light rounded-3xl p-8 sm:p-12 border-l-4 border-brand-red"
+      >
+        <div class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 bg-brand-red rounded-full flex-shrink-0 flex items-center justify-center mt-1"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black text-brand-dark mb-3">
+              ¿Qué es Misión 94.3 FM?
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Un proyecto comunicacional identificado con el proceso de <strong
+                >formación, comunicación y asistencia técnico-comunitaria
+                interactiva</strong
+              >. Este medio de Comunicación Popular Alternativo permite
+              desarrollar el rol y la responsabilidad social en colaboración con
+              los prestadores de servicios, organizaciones comunitarias y el
+              Estado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="py-16 bg-neutral-light">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-black text-brand-dark text-center mb-12">
+        Nuestros Valores
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          [
+            {
+              emoji: "📻",
+              title: "Pasión por la Radio",
+              desc: "Trabajamos con pasión por la radio como medio de acercamiento comunitario.",
+            },
+            {
+              emoji: "🇻🇪",
+              title: "Valores Patrióticos",
+              desc: "Resaltamos los valores patrióticos y la memoria histórica de Venezuela.",
+            },
+            {
+              emoji: "🤝",
+              title: "Empatía Colectiva",
+              desc: "Fomentamos la empatía colectiva y la colaboración entre comunidades.",
+            },
+            {
+              emoji: "🛢️",
+              title: "Identidad Petrolera",
+              desc: "Reconocemos la importancia de la economía petrolera en la identidad del Zulia.",
+            },
+            {
+              emoji: "🏘️",
+              title: "Acercamiento Comunitario",
+              desc: "Somos un puente entre vecinos, organizaciones y el Estado.",
+            },
+            {
+              emoji: "📖",
+              title: "Memoria Histórica",
+              desc: "Preservamos y difundimos la cultura e historia de nuestra región.",
+            },
+          ].map((v) => (
+            <div class="card-hover bg-white rounded-2xl p-6 shadow-sm text-center">
+              <span class="text-4xl block mb-3">{v.emoji}</span>
+              <h3 class="font-bold text-brand-dark text-lg mb-2">{v.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión & Visión -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <!-- Misión -->
+      <div class="card-hover rounded-3xl overflow-hidden shadow-lg">
+        <div class="bg-brand-dark text-white p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div
+              class="w-10 h-10 bg-brand-red rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-black">Misión</h2>
+          </div>
+        </div>
+        <div class="bg-neutral-light p-6">
+          <p class="text-gray-600 leading-relaxed">
+            Ser el <strong>vehículo comunicacional integral</strong> en el cual las
+            comunidades se expresen y generen contenidos que realcen su construcción
+            y quehacer diario.
+          </p>
+        </div>
+      </div>
+
+      <!-- Visión -->
+      <div class="card-hover rounded-3xl overflow-hidden shadow-lg">
+        <div class="bg-brand-red text-white p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div
+              class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-2xl font-black">Visión</h2>
+          </div>
+        </div>
+        <div class="bg-neutral-light p-6">
+          <p class="text-gray-600 leading-relaxed">
+            Consolidar en el Municipio <strong>Cabimas</strong> un medio de información
+            que rescate valores y cultura, promoviendo la contraloría social comunicacional
+            bajo la Constitución y la
+            <strong
+              >Ley de Responsabilidad Social en Radio y Televisión (Ley RESORTE)</strong
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,307 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Misión 94.3 FM — Inicio">
+  <!-- ══ HERO ══ -->
+  <section
+    class="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+    style="background: linear-gradient(135deg, #0a0e52 0%, #1a237e 50%, #0d0d0d 100%);"
+  >
+    <!-- Background decorative circles -->
+    <div
+      class="absolute top-10 left-10 w-64 h-64 rounded-full opacity-10"
+      style="background: radial-gradient(circle, #d32f2f, transparent);"
+    >
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-10"
+      style="background: radial-gradient(circle, #d32f2f, transparent);"
+    >
+    </div>
+
+    <!-- Signal rings -->
+    <div
+      class="absolute inset-0 flex items-center justify-center pointer-events-none"
+    >
+      <div
+        class="w-64 h-64 rounded-full border border-red-500/10 animate-ping animation-duration-[3s]"
+      >
+      </div>
+    </div>
+
+    <div class="relative z-10 px-4 max-w-4xl mx-auto">
+      <!-- Logo icon -->
+      <div
+        class="mx-auto mb-6 w-24 h-24 rounded-full bg-brand-red flex items-center justify-center pulse-glow fade-in-up"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-14 h-14 text-white"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14v-4H9l3-6 3 6h-2v4h-2z"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- Title -->
+      <h1
+        class="text-6xl sm:text-7xl md:text-8xl font-black tracking-tight mb-2 fade-in-up fade-in-up-2"
+      >
+        <span class="gradient-text">MISIÓN</span>
+      </h1>
+      <p
+        class="text-4xl sm:text-5xl font-black text-brand-red mb-3 fade-in-up fade-in-up-2"
+      >
+        94.3 FM
+      </p>
+      <p
+        class="text-blue-200 text-lg sm:text-xl font-light tracking-widest uppercase mb-10 fade-in-up fade-in-up-3"
+      >
+        Radio Comunitaria · Cabimas, Zulia
+      </p>
+
+      <!-- Wave animation -->
+      <div
+        class="flex items-end justify-center gap-2 mb-10 fade-in-up fade-in-up-3"
+        style="height:48px;"
+      >
+        <span class="wave-bar" style="height:18px;"></span>
+        <span class="wave-bar" style="height:32px;"></span>
+        <span class="wave-bar" style="height:48px;"></span>
+        <span class="wave-bar" style="height:28px;"></span>
+        <span class="wave-bar" style="height:40px;"></span>
+        <span class="wave-bar" style="height:22px;"></span>
+        <span class="wave-bar" style="height:36px;"></span>
+      </div>
+
+      <!-- CTA buttons -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up fade-in-up-4"
+      >
+        <button
+          id="hero-play-btn"
+          class="group flex items-center gap-3 bg-brand-red hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-full pulse-glow transition-all hover:scale-105"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
+            ><path d="M8 5v14l11-7z"></path></svg
+          >
+          ¡ESCÚCHALA!
+        </button>
+        <a
+          href="https://zeno.fm/player/unsxrfcdn5jtv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 border-2 border-blue-300 hover:border-white text-blue-200 hover:text-white font-semibold px-7 py-4 rounded-full transition-all hover:scale-105"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M11 17H7a5 5 0 0 1 0-10h4v2H7a3 3 0 0 0 0 6h4v2zm-3-4v-2h8v2H8zm5 4v-2h4a3 3 0 0 0 0-6h-4V7h4a5 5 0 0 1 0 10h-4z"
+            ></path>
+          </svg>
+          Reproductor alternativo
+        </a>
+      </div>
+
+      <!-- Zeno.fm embedded player -->
+      <!-- <div class="mt-8 fade-in-up fade-in-up-4 w-full max-w-sm mx-auto">
+        <iframe
+          src="https://zeno.fm/player/unsxrfcdn5jtv"
+          width="100%"
+          height="180"
+          frameborder="0"
+          scrolling="no"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title="Reproductor Misión 94.3 FM"
+          class="rounded-2xl shadow-2xl"></iframe>
+      </div> -->
+    </div>
+
+    <!-- Scroll hint -->
+    <div
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 text-blue-300 animate-bounce"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══ SÍGUENOS ══ -->
+  <section class="py-20 bg-neutral-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl font-black text-brand-dark mb-3">
+        ¡SÍGUENOS!
+      </h2>
+      <p class="text-gray-500 mb-10">
+        Conéctate con nuestra comunidad en redes sociales
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <!-- Facebook -->
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-hover flex items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-md border border-gray-100 hover:border-[#3b5998]"
+        >
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center bg-[#3b5998]"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              ></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <p class="font-bold text-neutral-dark">Facebook</p>
+            <p class="text-sm text-gray-500">Misión 94.3 FM</p>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-hover flex items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-md border border-gray-100"
+        >
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center"
+            style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"
+              ></circle>
+            </svg>
+          </div>
+          <div class="text-left">
+            <p class="font-bold text-neutral-dark">Instagram</p>
+            <p class="text-sm text-gray-500">@mision943fm</p>
+          </div>
+        </a>
+
+        <!-- Twitter/X -->
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-hover flex items-center gap-4 bg-white rounded-2xl px-8 py-5 shadow-md border border-gray-100 hover:border-[#1da1f2]"
+        >
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center bg-[#1da1f2]"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+              ></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <p class="font-bold text-neutral-dark">Twitter / X</p>
+            <p class="text-sm text-gray-500">@mision943fm</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACERCA DE — mini ══ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-brand-red font-bold uppercase text-sm tracking-widest"
+          >Radio Comunitaria</span
+        >
+        <h2
+          class="text-3xl sm:text-4xl font-black text-brand-dark mt-2 mb-4 leading-tight"
+        >
+          La voz de nuestra comunidad
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Misión 94.3 FM es un proyecto comunicacional identificado con el
+          proceso de formación, comunicación y asistencia técnico-comunitaria
+          interactiva.
+        </p>
+        <a
+          href="/quienes-somos"
+          class="inline-flex items-center gap-2 bg-brand-dark text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-900 transition-colors"
+        >
+          Conoce más
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        {
+          [
+            { icon: "📡", label: "Frecuencia", value: "94.3 FM" },
+            { icon: "🇻🇪", label: "Ubicación", value: "Cabimas, Zulia" },
+            { icon: "🏘️", label: "Enfoque", value: "Comunitario" },
+            { icon: "📻", label: "Tipo", value: "Popular Alternativo" },
+          ].map((item) => (
+            <div class="card-hover bg-neutral-light rounded-2xl p-5 text-center">
+              <span class="text-3xl block mb-2">{item.icon}</span>
+              <p class="text-xs text-gray-400 font-semibold uppercase tracking-wide">
+                {item.label}
+              </p>
+              <p class="font-bold text-neutral-dark text-sm mt-1">
+                {item.value}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Hook "hero play" button to the sticky player
+  const heroPlayBtn = document.getElementById("hero-play-btn");
+  heroPlayBtn?.addEventListener("click", () => {
+    document.getElementById("play-btn")?.click();
+    document
+      .getElementById("audio-player-bar")
+      ?.scrollIntoView({ behavior: "smooth" });
+  });
+</script>

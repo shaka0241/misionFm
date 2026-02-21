@@ -1,0 +1,366 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Misión 94.3 FM",
+  description = "Misión 94.3 FM — Radio comunitaria de Cabimas, Estado Zulia, Venezuela. Escúchanos en vivo.",
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/quienes-somos", label: "¿Quiénes Somos?" },
+  { href: "/programacion", label: "Programación" },
+  { href: "/contacto", label: "Contacto" },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Radio Comunitaria Cabimas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-white text-neutral-dark font-sans">
+    <!-- ── HEADER ── -->
+    <header class="sticky top-0 z-50 bg-brand-dark shadow-lg">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3 group">
+          <div
+            class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center pulse-glow"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm-1-11v6l5-3-5-3z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <span
+              class="text-white font-black text-xl leading-none tracking-tight"
+              >MISIÓN</span
+            >
+            <span class="text-brand-red font-black text-xl leading-none ml-1"
+              >94.3 FM</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6">
+          {
+            navLinks.map((link) => (
+              <a
+                href={link.href}
+                class:list={[
+                  "nav-link text-white font-semibold text-sm tracking-wide hover:text-brand-red transition-colors",
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname.startsWith(link.href))
+                    ? "active text-brand-red"
+                    : "",
+                ]}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </nav>
+
+        <!-- Live badge + hamburger -->
+        <div class="flex items-center gap-3">
+          <a
+            href="#audio-player-bar"
+            class="hidden sm:flex items-center gap-2 bg-brand-red hover:bg-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors"
+          >
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+            EN VIVO
+          </a>
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            aria-label="Abrir menú"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <svg
+              id="icon-open"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg
+              id="icon-close"
+              class="w-7 h-7 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden border-t border-blue-900">
+        <nav class="flex flex-col px-4 py-3 gap-3">
+          {
+            navLinks.map((link) => (
+              <a
+                href={link.href}
+                class:list={[
+                  "text-white font-semibold text-base hover:text-brand-red transition-colors",
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname.startsWith(link.href))
+                    ? "text-brand-red"
+                    : "",
+                ]}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="bg-brand-dark text-white py-8 pb-24">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <span class="font-black text-lg">MISIÓN</span>
+          <span class="text-brand-red font-black text-lg">94.3 FM</span>
+          <span class="text-blue-300 text-sm ml-2">©</span>
+        </div>
+
+        <!-- Social -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="w-9 h-9 rounded-full flex items-center justify-center bg-[#3b5998] hover:scale-110 transition-transform"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="w-9 h-9 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                ry="5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"></rect>
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter / X"
+            class="w-9 h-9 rounded-full flex items-center justify-center bg-[#1da1f2] hover:scale-110 transition-transform"
+          >
+            <svg
+              class="w-4 h-4 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <p class="text-blue-300 text-sm">
+          Radio Comunitaria · Cabimas, Zulia · Venezuela
+        </p>
+      </div>
+    </footer>
+
+    <!-- ── STICKY AUDIO PLAYER ── -->
+    <div id="audio-player-bar" role="region" aria-label="Reproductor de radio">
+      <!-- Wave bars -->
+      <div class="hidden sm:flex items-end gap-1 h-8">
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+      </div>
+
+      <!-- Play button -->
+      <button
+        id="play-btn"
+        aria-label="Reproducir/Pausar"
+        class="w-11 h-11 rounded-full bg-brand-red hover:bg-red-700 flex items-center justify-center flex-shrink-0 transition-colors"
+      >
+        <svg
+          id="icon-play"
+          class="w-5 h-5 text-white ml-0.5"
+          fill="currentColor"
+          viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg
+        >
+        <svg
+          id="icon-pause"
+          class="w-5 h-5 text-white hidden"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          ><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg
+        >
+      </button>
+
+      <!-- Info -->
+      <div class="flex flex-col flex-1 min-w-0">
+        <span class="text-white font-bold text-sm leading-tight truncate"
+          >MISIÓN 94.3 FM</span
+        >
+        <span class="text-blue-300 text-xs truncate" id="player-status"
+          >Haz clic para escuchar en vivo</span
+        >
+      </div>
+
+      <!-- Alt player link -->
+      <a
+        href="https://zeno.fm/player/unsxrfcdn5jtv"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden sm:flex items-center gap-1 text-blue-200 hover:text-white text-xs border border-blue-400 hover:border-white rounded-full px-3 py-1.5 transition-colors flex-shrink-0"
+      >
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"
+          ><path
+            d="M11 17H7a5 5 0 0 1 0-10h4v2H7a3 3 0 0 0 0 6h4v2zm-3-4v-2h8v2H8zm5 4v-2h4a3 3 0 0 0 0-6h-4V7h4a5 5 0 0 1 0 10h-4z"
+          ></path></svg
+        >
+        Reproductor alternativo
+      </a>
+
+      <!-- Hidden audio element -->
+      <audio id="radio-audio" preload="none">
+        <!-- Stream URL placeholder — replace with actual stream -->
+        <source src="" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script>
+      // Hamburger menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      menuBtn?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("open");
+        iconOpen?.classList.toggle("hidden");
+        iconClose?.classList.toggle("hidden");
+      });
+
+      // Mini audio player
+      const playBtn = document.getElementById("play-btn");
+      const iconPlay = document.getElementById("icon-play");
+      const iconPause = document.getElementById("icon-pause");
+      const radioAudio = document.getElementById(
+        "radio-audio",
+      ) as HTMLAudioElement;
+      const playerStatus = document.getElementById("player-status");
+      let playing = false;
+
+      playBtn?.addEventListener("click", () => {
+        if (!playing) {
+          // Stream Zeno.fm — Misión 94.3 FM
+          if (radioAudio && !radioAudio.src) {
+            radioAudio.src = "https://stream.zeno.fm/unsxrfcdn5jtv";
+          }
+          radioAudio?.play().catch(() => {
+            if (playerStatus)
+              playerStatus.textContent = "Stream no disponible en este momento";
+          });
+          iconPlay?.classList.add("hidden");
+          iconPause?.classList.remove("hidden");
+          if (playerStatus) playerStatus.textContent = "Reproduciendo en vivo…";
+          playing = true;
+        } else {
+          radioAudio?.pause();
+          iconPlay?.classList.remove("hidden");
+          iconPause?.classList.add("hidden");
+          if (playerStatus) playerStatus.textContent = "Pausado";
+          playing = false;
+        }
+      });
+    </script>
+  </body>
+</html>

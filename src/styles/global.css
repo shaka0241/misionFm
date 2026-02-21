@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-brand-dark: #1a237e;
+  --color-brand-red: #d32f2f;
+  --color-neutral-light: #f5f5f5;
+  --color-neutral-dark: #212121;
+  --color-fb-blue: #3b5998;
+  --color-tw-blue: #1da1f2;
+
+  /* Typography */
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Inter:wght@400;600&display=swap');
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+  margin: 0;
+  /* Push content above the sticky audio player */
+  padding-bottom: 5rem;
+}
+
+/* ── Radio wave animation ── */
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1); }
+}
+
+.wave-bar {
+  display: inline-block;
+  width: 4px;
+  background: #d32f2f;
+  border-radius: 2px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+.wave-bar:nth-child(2) { animation-delay: 0.2s; height: 24px; }
+.wave-bar:nth-child(3) { animation-delay: 0.4s; height: 32px; }
+.wave-bar:nth-child(4) { animation-delay: 0.1s; height: 20px; }
+.wave-bar:nth-child(5) { animation-delay: 0.3s; height: 28px; }
+.wave-bar:nth-child(1) { height: 18px; }
+
+/* ── Pulse glow ── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(211,47,47,0.5); }
+  50%       { box-shadow: 0 0 30px rgba(211,47,47,0.9), 0 0 60px rgba(211,47,47,0.4); }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ── Hero gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #f5a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Fade-in animation ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease-out both;
+}
+.fade-in-up-2 { animation-delay: 0.2s; }
+.fade-in-up-3 { animation-delay: 0.4s; }
+.fade-in-up-4 { animation-delay: 0.6s; }
+
+/* ── Card hover ── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ── Nav link underline ── */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: #d32f2f;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ── Audio player ── */
+#audio-player-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 999;
+  background: linear-gradient(90deg, #0d1257 0%, #1a237e 50%, #0d1257 100%);
+  border-top: 2px solid #d32f2f;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Mobile nav */
+#mobile-menu {
+  display: none;
+}
+#mobile-menu.open {
+  display: block;
+}
+
+/* Instagram gradient icon */
+.ig-icon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

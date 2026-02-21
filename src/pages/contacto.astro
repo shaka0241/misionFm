@@ -1,0 +1,334 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const contactos = [
+  {
+    nombre: "Ender Arrieta",
+    telefono: "+58 424-666.96.12",
+    whatsapp: "584246669612",
+  },
+  {
+    nombre: "Emilio Mendoza",
+    telefono: "+58 412-169.18.92",
+    whatsapp: "584121691892",
+  },
+];
+---
+
+<Layout
+  title="Contacto — Misión 94.3 FM"
+  description="Contáctanos en Misión 94.3 FM. Dirección, teléfonos y correo electrónico de la radio comunitaria de Cabimas, Zulia."
+>
+  <!-- Banner -->
+  <section
+    class="py-24 text-center text-white relative overflow-hidden"
+    style="background: linear-gradient(135deg, #0a0e52, #1a237e);"
+  >
+    <div
+      class="absolute inset-0 opacity-5"
+      style="background-image: repeating-linear-gradient(0deg, #fff 0, #fff 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, #fff 0, #fff 1px, transparent 1px, transparent 40px);"
+    >
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto px-4">
+      <span class="text-brand-red font-bold uppercase tracking-widest text-sm"
+        >Estamos aquí</span
+      >
+      <h1 class="text-4xl sm:text-5xl font-black mt-3 mb-4">Contacto</h1>
+      <p class="text-blue-200 text-lg">
+        Comunícate con nosotros, estamos para servirte
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-neutral-light">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <!-- Info Card -->
+      <div class="flex flex-col gap-6">
+        <!-- Emisora -->
+        <div class="card-hover bg-white rounded-3xl p-7 shadow-sm">
+          <div
+            class="flex items-center gap-3 mb-5 border-b pb-4 border-gray-100"
+          >
+            <div
+              class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14v-4H9l3-6 3 6h-2v4h-2z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="font-black text-brand-dark text-xl">Misión 94.3 FM</h2>
+          </div>
+
+          <!-- Dirección -->
+          <div class="flex gap-3 items-start mb-4">
+            <div
+              class="w-9 h-9 bg-brand-red/10 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-brand-red"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-0.5"
+              >
+                Dirección
+              </p>
+              <p class="text-gray-700 leading-snug">
+                Calle Nuevo Mundo, No. 78, La Misión<br />
+                Cabimas, Estado Zulia, Venezuela
+              </p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex gap-3 items-start mb-4">
+            <div
+              class="w-9 h-9 bg-brand-red/10 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-brand-red"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-0.5"
+              >
+                Correo electrónico
+              </p>
+              <a
+                href="mailto:Mision943fm@gmail.com"
+                class="text-brand-red hover:text-red-700 font-semibold transition-colors"
+              >
+                Mision943fm@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Frecuencia -->
+          <div class="flex gap-3 items-start">
+            <div
+              class="w-9 h-9 bg-brand-red/10 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-brand-red"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3.24 6.15C2.51 6.43 2 7.17 2 8v12c0 1.1.89 2 2 2h16c1.11 0 2-.9 2-2V8c0-1.11-.89-2-2-2H8.3l8.26-3.34L15.88 1 3.24 6.15zM7 20c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13-8h-2v-2h-2v2H4v-2h14V9l2 3z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-400 font-semibold uppercase tracking-wide mb-0.5"
+              >
+                Frecuencia
+              </p>
+              <p class="text-gray-700 font-bold text-lg">94.3 FM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contactos -->
+        <div class="card-hover bg-white rounded-3xl p-7 shadow-sm">
+          <h2
+            class="font-black text-brand-dark text-xl mb-5 border-b pb-4 border-gray-100"
+          >
+            Teléfonos de Contacto
+          </h2>
+          <div class="flex flex-col gap-4">
+            {
+              contactos.map((c) => (
+                <div class="flex items-center justify-between gap-4 p-4 bg-neutral-light rounded-2xl">
+                  <div>
+                    <p class="font-bold text-neutral-dark">{c.nombre}</p>
+                    <p class="text-gray-500 text-sm">{c.telefono}</p>
+                  </div>
+                  <div class="flex gap-2">
+                    <a
+                      href={`tel:${c.whatsapp}`}
+                      aria-label={`Llamar a ${c.nombre}`}
+                      class="w-9 h-9 bg-brand-dark hover:bg-blue-900 rounded-full flex items-center justify-center transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                      </svg>
+                    </a>
+                    <a
+                      href={`https://wa.me/${c.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`WhatsApp a ${c.nombre}`}
+                      class="w-9 h-9 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="flex flex-col gap-6">
+        <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm">
+          <div class="p-5 border-b border-gray-100 flex items-center gap-2">
+            <svg
+              class="w-5 h-5 text-brand-red"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+            <h2 class="font-black text-brand-dark text-lg">
+              Nuestra Ubicación
+            </h2>
+          </div>
+          <div class="h-72 sm:h-96 w-full">
+            <iframe
+              title="Ubicación de Misión 94.3 FM en Cabimas, Zulia"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-71.48%2C10.37%2C-71.40%2C10.42&layer=mapnik&marker=10.395%2C-71.445"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+          <div class="p-4">
+            <a
+              href="https://www.openstreetmap.org/?mlat=10.395&mlon=-71.445#map=14/10.395/-71.445"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-brand-red hover:underline text-sm font-semibold"
+            >
+              Ver en OpenStreetMap →
+            </a>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="card-hover bg-white rounded-3xl p-7 shadow-sm">
+          <h2 class="font-black text-brand-dark text-xl mb-5">
+            Síguenos en redes
+          </h2>
+          <div class="flex flex-col gap-3">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-light transition-colors group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-[#3b5998] flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-neutral-dark group-hover:text-brand-dark"
+                >Facebook — Misión 94.3 FM</span
+              >
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-light transition-colors group"
+            >
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"
+                  ></circle>
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-neutral-dark group-hover:text-brand-dark"
+                >Instagram — @mision943fm</span
+              >
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 p-3 rounded-xl hover:bg-neutral-light transition-colors group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-[#1da1f2] flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                  ></path>
+                </svg>
+              </div>
+              <span
+                class="font-semibold text-neutral-dark group-hover:text-brand-dark"
+                >Twitter / X — @mision943fm</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
