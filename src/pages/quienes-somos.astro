@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
       >
       <h1 class="text-4xl sm:text-5xl font-black mt-3 mb-4">¿Quiénes Somos?</h1>
       <p class="text-blue-200 text-lg">
-        Un medio de comunicación popular alternativo al servicio de la comunidad
+        Un medio de comunicación popular alternativo al servicio de la gente
       </p>
     </div>
   </section>
@@ -77,7 +77,7 @@ import Layout from "../layouts/Layout.astro";
             {
               emoji: "📻",
               title: "Pasión por la Radio",
-              desc: "Trabajamos con pasión por la radio como medio de acercamiento comunitario.",
+              desc: "Trabajamos con pasión por la radio como medio de acercamiento social.",
             },
             {
               emoji: "🇻🇪",
@@ -87,7 +87,7 @@ import Layout from "../layouts/Layout.astro";
             {
               emoji: "🤝",
               title: "Empatía Colectiva",
-              desc: "Fomentamos la empatía colectiva y la colaboración entre comunidades.",
+              desc: "Fomentamos la empatía colectiva y la colaboración entre ciudadanos.",
             },
             {
               emoji: "🛢️",
@@ -120,7 +120,9 @@ import Layout from "../layouts/Layout.astro";
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8">
       <!-- Misión -->
-      <div class="card-hover rounded-3xl overflow-hidden shadow-lg">
+      <div
+        class="card-hover rounded-3xl overflow-hidden shadow-lg flex flex-col"
+      >
         <div class="bg-brand-dark text-white p-6">
           <div class="flex items-center gap-3 mb-2">
             <div
@@ -139,17 +141,19 @@ import Layout from "../layouts/Layout.astro";
             <h2 class="text-2xl font-black">Misión</h2>
           </div>
         </div>
-        <div class="bg-neutral-light p-6">
+        <div class="bg-neutral-light p-6 flex-grow">
           <p class="text-gray-600 leading-relaxed">
-            Ser el <strong>vehículo comunicacional integral</strong> en el cual las
-            comunidades se expresen y generen contenidos que realcen su construcción
+            Ser el <strong>vehículo comunicacional integral</strong> en el cual los
+            ciudadanos se expresen y generen contenidos que realcen su construcción
             y quehacer diario.
           </p>
         </div>
       </div>
 
       <!-- Visión -->
-      <div class="card-hover rounded-3xl overflow-hidden shadow-lg">
+      <div
+        class="card-hover rounded-3xl overflow-hidden shadow-lg flex flex-col"
+      >
         <div class="bg-brand-primary text-white p-6">
           <div class="flex items-center gap-3 mb-2">
             <div
@@ -168,7 +172,7 @@ import Layout from "../layouts/Layout.astro";
             <h2 class="text-2xl font-black">Visión</h2>
           </div>
         </div>
-        <div class="bg-neutral-light p-6">
+        <div class="bg-neutral-light p-6 flex-grow">
           <p class="text-gray-600 leading-relaxed">
             Consolidar en el Municipio <strong>Cabimas</strong> un medio de información
             que rescate valores y cultura, promoviendo la contraloría social comunicacional
