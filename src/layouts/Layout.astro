@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = "Misión 94.3 FM",
-  description = "Misión 94.3 FM — Radio comunitaria de Cabimas, Estado Zulia, Venezuela. Escúchanos en vivo.",
+  description = "Misión 94.3 FM — Radio de Cabimas, Estado Zulia, Venezuela. Escúchanos en vivo.",
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -28,7 +28,7 @@ const navLinks = [
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | Radio Comunitaria Cabimas</title>
+    <title>{title} | Radio de Cabimas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +46,7 @@ const navLinks = [
         <!-- Logo -->
         <a href="/" class="flex items-center gap-3 group">
           <div
-            class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center pulse-glow"
+            class="w-10 h-10 rounded-full bg-brand-primary flex items-center justify-center pulse-glow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,8 @@ const navLinks = [
               class="text-white font-black text-xl leading-none tracking-tight"
               >MISIÓN</span
             >
-            <span class="text-brand-red font-black text-xl leading-none ml-1"
+            <span
+              class="text-brand-primary font-black text-xl leading-none ml-1"
               >94.3 FM</span
             >
           </div>
@@ -77,10 +78,10 @@ const navLinks = [
               <a
                 href={link.href}
                 class:list={[
-                  "nav-link text-white font-semibold text-sm tracking-wide hover:text-brand-red transition-colors",
+                  "nav-link text-white font-semibold text-sm tracking-wide hover:text-brand-primary transition-colors",
                   pathname === link.href ||
                   (link.href !== "/" && pathname.startsWith(link.href))
-                    ? "active text-brand-red"
+                    ? "active text-brand-primary"
                     : "",
                 ]}
               >
@@ -94,7 +95,7 @@ const navLinks = [
         <div class="flex items-center gap-3">
           <a
             href="#audio-player-bar"
-            class="hidden sm:flex items-center gap-2 bg-brand-red hover:bg-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors"
+            class="hidden sm:flex items-center gap-2 bg-brand-primary hover:bg-blue-700 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors"
           >
             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
             EN VIVO
@@ -143,10 +144,10 @@ const navLinks = [
               <a
                 href={link.href}
                 class:list={[
-                  "text-white font-semibold text-base hover:text-brand-red transition-colors",
+                  "text-white font-semibold text-base hover:text-brand-primary transition-colors",
                   pathname === link.href ||
                   (link.href !== "/" && pathname.startsWith(link.href))
-                    ? "text-brand-red"
+                    ? "text-brand-primary"
                     : "",
                 ]}
               >
@@ -171,7 +172,7 @@ const navLinks = [
         <!-- Logo -->
         <div class="flex items-center gap-2">
           <span class="font-black text-lg">MISIÓN</span>
-          <span class="text-brand-red font-black text-lg">94.3 FM</span>
+          <span class="text-brand-primary font-black text-lg">94.3 FM</span>
           <span class="text-blue-300 text-sm ml-2">©</span>
         </div>
 
@@ -247,7 +248,7 @@ const navLinks = [
         </div>
 
         <p class="text-blue-300 text-sm">
-          Radio Comunitaria · Cabimas, Zulia · Venezuela
+          Radio de Cabimas · Zulia · Venezuela
         </p>
       </div>
     </footer>
@@ -267,7 +268,7 @@ const navLinks = [
       <button
         id="play-btn"
         aria-label="Reproducir/Pausar"
-        class="w-11 h-11 rounded-full bg-brand-red hover:bg-red-700 flex items-center justify-center flex-shrink-0 transition-colors"
+        class="w-11 h-11 rounded-full bg-brand-primary hover:bg-blue-700 flex items-center justify-center flex-shrink-0 transition-colors"
       >
         <svg
           id="icon-play"

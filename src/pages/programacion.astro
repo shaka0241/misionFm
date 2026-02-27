@@ -14,10 +14,10 @@ const dias = [
   },
   {
     dia: 'Martes',
-    color: '#d32f2f',
+    color: '#2563eb',
     programas: [
       { hora: '06:00 – 09:00', nombre: 'Buenos Días Cabimas', tipo: 'Matutino' },
-      { hora: '10:00 – 12:00', nombre: 'Salud Comunitaria', tipo: 'Informativo' },
+      { hora: '10:00 – 12:00', nombre: 'Salud', tipo: 'Informativo' },
       { hora: '14:00 – 16:00', nombre: 'Música Venezolana', tipo: 'Musical' },
       { hora: '18:00 – 20:00', nombre: 'La Tarde en Misión', tipo: 'Entretenimiento' },
     ],
@@ -34,7 +34,7 @@ const dias = [
   },
   {
     dia: 'Jueves',
-    color: '#d32f2f',
+    color: '#2563eb',
     programas: [
       { hora: '06:00 – 09:00', nombre: 'Buenos Días Cabimas', tipo: 'Matutino' },
       { hora: '10:00 – 12:00', nombre: 'Historias de Mi Barrio', tipo: 'Comunitario' },
@@ -54,7 +54,7 @@ const dias = [
   },
   {
     dia: 'Sábado',
-    color: '#d32f2f',
+    color: '#2563eb',
     programas: [
       { hora: '08:00 – 11:00', nombre: 'Mañana Sabatina', tipo: 'Matutino' },
       { hora: '11:00 – 14:00', nombre: 'Ritmos Latinoamericanos', tipo: 'Musical' },
@@ -66,7 +66,7 @@ const dias = [
     dia: 'Domingo',
     color: '#1a237e',
     programas: [
-      { hora: '08:00 – 11:00', nombre: 'Reflexión Comunitaria', tipo: 'Espiritual' },
+      { hora: '08:00 – 11:00', nombre: 'Reflexión', tipo: 'Espiritual' },
       { hora: '11:00 – 14:00', nombre: 'Familia y Tradición', tipo: 'Familiar' },
       { hora: '15:00 – 18:00', nombre: 'El Zulia Suena', tipo: 'Musical' },
       { hora: '20:00 – 23:00', nombre: 'Cierre Dominical', tipo: 'Cultural' },
@@ -83,8 +83,8 @@ const tipoBadge: Record<string, string> = {
   'Educativo':      'bg-teal-100 text-teal-800',
   'Económico':      'bg-orange-100 text-orange-800',
   'Comunitario':    'bg-indigo-100 text-indigo-800',
-  'Deportivo':      'bg-red-100 text-red-800',
-  'Especial':       'bg-brand-red/10 text-brand-red',
+  'Deportivo':      'bg-rose-100 text-rose-800',
+  'Especial':       'bg-brand-primary/10 text-brand-primary',
   'Espiritual':     'bg-amber-100 text-amber-800',
   'Familiar':       'bg-emerald-100 text-emerald-800',
 };
@@ -92,7 +92,7 @@ const tipoBadge: Record<string, string> = {
 
 <Layout
   title="Programación 2023 — Misión 94.3 FM"
-  description="Conoce la programación semanal de Misión 94.3 FM, radio comunitaria de Cabimas, Zulia."
+  description="Conoce la programación semanal de Misión 94.3 FM, radio de Cabimas, Zulia."
 >
 
   <!-- Banner -->
@@ -103,15 +103,15 @@ const tipoBadge: Record<string, string> = {
     <div class="absolute inset-0 opacity-5"
          style="background-image: repeating-linear-gradient(0deg, #fff 0, #fff 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, #fff 0, #fff 1px, transparent 1px, transparent 40px);"></div>
     <div class="relative z-10 max-w-2xl mx-auto px-4">
-      <span class="text-brand-red font-bold uppercase tracking-widest text-sm">Al aire</span>
+      <span class="text-brand-primary font-bold uppercase tracking-widest text-sm">Al aire</span>
       <h1 class="text-4xl sm:text-5xl font-black mt-3 mb-4">PROGRAMACIÓN 2023</h1>
       <p class="text-blue-200 text-lg">Desde Misión 94.3 FM con contenido para toda la familia</p>
     </div>
   </section>
 
   <!-- Aviso -->
-  <section class="py-6 bg-brand-red/10 border-b border-brand-red/20">
-    <p class="text-center text-sm text-brand-red font-semibold px-4">
+  <section class="py-6 bg-brand-primary/10 border-b border-brand-primary/20">
+    <p class="text-center text-sm text-brand-primary font-semibold px-4">
       📻 Los horarios pueden variar · Sintonízanos en el 94.3 FM o escúchanos en línea
     </p>
   </section>
@@ -152,7 +152,7 @@ const tipoBadge: Record<string, string> = {
     </p>
     <a
       href="/contacto"
-      class="inline-flex items-center gap-2 bg-brand-red text-white font-bold px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
+      class="inline-flex items-center gap-2 bg-brand-primary text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition-colors"
     >
       Contáctanos
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

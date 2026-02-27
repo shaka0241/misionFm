@@ -25,7 +25,7 @@ import Layout from "../layouts/Layout.astro";
       class="absolute inset-0 flex items-center justify-center pointer-events-none"
     >
       <div
-        class="w-64 h-64 rounded-full border border-red-500/10 animate-ping animation-duration-[3s]"
+        class="w-64 h-64 rounded-full border border-blue-500/10 animate-ping animation-duration-[3s]"
       >
       </div>
     </div>
@@ -33,7 +33,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="relative z-10 px-4 max-w-4xl mx-auto">
       <!-- Logo icon -->
       <div
-        class="mx-auto mb-6 w-24 h-24 rounded-full bg-brand-red flex items-center justify-center pulse-glow fade-in-up"
+        class="mx-auto mb-6 w-24 h-24 rounded-full bg-brand-primary flex items-center justify-center pulse-glow fade-in-up"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,14 +54,14 @@ import Layout from "../layouts/Layout.astro";
         <span class="gradient-text">MISIÓN</span>
       </h1>
       <p
-        class="text-4xl sm:text-5xl font-black text-brand-red mb-3 fade-in-up fade-in-up-2"
+        class="text-4xl sm:text-5xl font-black text-brand-primary mb-3 fade-in-up fade-in-up-2"
       >
         94.3 FM
       </p>
       <p
         class="text-blue-200 text-lg sm:text-xl font-light tracking-widest uppercase mb-10 fade-in-up fade-in-up-3"
       >
-        Radio Comunitaria · Cabimas, Zulia
+        Radio de Cabimas, Zulia
       </p>
 
       <!-- Wave animation -->
@@ -84,7 +84,7 @@ import Layout from "../layouts/Layout.astro";
       >
         <button
           id="hero-play-btn"
-          class="group flex items-center gap-3 bg-brand-red hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-full pulse-glow transition-all hover:scale-105"
+          class="group flex items-center gap-3 bg-brand-primary hover:bg-blue-700 text-white font-bold text-lg px-8 py-4 rounded-full pulse-glow transition-all hover:scale-105"
         >
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
             ><path d="M8 5v14l11-7z"></path></svg
@@ -239,8 +239,9 @@ import Layout from "../layouts/Layout.astro";
   <section class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <span class="text-brand-red font-bold uppercase text-sm tracking-widest"
-          >Radio Comunitaria</span
+        <span
+          class="text-brand-primary font-bold uppercase text-sm tracking-widest"
+          >Radio de Cabimas</span
         >
         <h2
           class="text-3xl sm:text-4xl font-black text-brand-dark mt-2 mb-4 leading-tight"
@@ -249,8 +250,7 @@ import Layout from "../layouts/Layout.astro";
         </h2>
         <p class="text-gray-600 leading-relaxed mb-6">
           Misión 94.3 FM es un proyecto comunicacional identificado con el
-          proceso de formación, comunicación y asistencia técnico-comunitaria
-          interactiva.
+          proceso de formación, comunicación y asistencia técnica interactiva.
         </p>
         <a
           href="/quienes-somos"

@@ -3,7 +3,7 @@
 @theme {
   /* Brand colors */
   --color-brand-dark: #1a237e;
-  --color-brand-red: #d32f2f;
+  --color-brand-primary: #2563eb;
   --color-neutral-light: #f5f5f5;
   --color-neutral-dark: #212121;
   --color-fb-blue: #3b5998;
@@ -40,7 +40,7 @@ body {
 .wave-bar {
   display: inline-block;
   width: 4px;
-  background: #d32f2f;
+  background: var(--color-brand-primary);
   border-radius: 2px;
   animation: wave 1.2s ease-in-out infinite;
 }
@@ -52,8 +52,8 @@ body {
 
 /* ── Pulse glow ── */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(211,47,47,0.5); }
-  50%       { box-shadow: 0 0 30px rgba(211,47,47,0.9), 0 0 60px rgba(211,47,47,0.4); }
+  0%, 100% { box-shadow: 0 0 10px rgba(37,99,235,0.5); }
+  50%       { box-shadow: 0 0 30px rgba(37,99,235,0.9), 0 0 60px rgba(37,99,235,0.4); }
 }
 
 .pulse-glow {
@@ -62,7 +62,7 @@ body {
 
 /* ── Hero gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #f5a0a0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,7 +100,7 @@ body {
   position: absolute;
   bottom: 0; left: 0;
   width: 0; height: 2px;
-  background: #d32f2f;
+  background: var(--color-brand-primary);
   transition: width 0.3s ease;
 }
 .nav-link:hover::after,
@@ -114,7 +114,7 @@ body {
   bottom: 0; left: 0; right: 0;
   z-index: 999;
   background: linear-gradient(90deg, #0d1257 0%, #1a237e 50%, #0d1257 100%);
-  border-top: 2px solid #d32f2f;
+  border-top: 2px solid var(--color-brand-primary);
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
